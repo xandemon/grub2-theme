@@ -1,6 +1,11 @@
 # Anime GRUB Theme
 
-A minimal anime-inspired GRUB bootloader theme with multiple cool-looking variants.
+A lightweight & minimal anime-inspired GRUB bootloader theme with multiple cool-looking variants.
+
+## Previews
+
+![gojo-satoru grub theme preview](previews/gojo-satoru.png)
+![rem grub theme preview](previews/rem.png)
 
 ## Structure
 
@@ -10,11 +15,20 @@ A minimal anime-inspired GRUB bootloader theme with multiple cool-looking varian
 
 ## How It Works
 
-This project uses an automated workflow to generate theme variants:
+This project uses an automated workflow (Github Actions) to generate theme variants:
 
 1. **Base Theme** (`base/`) contains the core theme assets and `theme.txt` configuration
 2. **Variant Images** (`variants/`) contain background images (jpg, jpeg, or png)
 3. **Generated Themes** (`themes/`) are automatically created by combining the base theme with each variant image
+
+When you push changes to the `main` branch that affect:
+- Files in `base/`
+- Files in `variants/`
+- The generation script or workflow
+
+GitHub Actions will automatically:
+1. Generate all theme variants
+2. Commit the generated themes to the repository
 
 ### Manual Generation
 
@@ -29,17 +43,6 @@ This will:
 - Copy all base assets to each theme
 - Update `theme.txt` to use the variant's background image
 - Clean up themes for removed variants
-
-### Automatic Generation (GitHub Actions)
-
-When you push changes to the `main` branch that affect:
-- Files in `base/`
-- Files in `variants/`
-- The generation script or workflow
-
-GitHub Actions will automatically:
-1. Generate all theme variants
-2. Commit the generated themes to the repository
 
 ## Important Notes
 
@@ -56,5 +59,5 @@ GitHub Actions will automatically:
 2. Push to `main` branch
 3. GitHub Actions will automatically generate the theme
 
-Or run `./generate-themes.sh` locally to test.
+> Run `./generate-themes.sh` locally to test.
 
