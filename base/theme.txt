@@ -1,4 +1,4 @@
-# GRUB theme
+# Anime GRUB Theme by xandemon
 
 desktop-image: "image.jpg"
 title-text: ""
