@@ -1,0 +1,17 @@
+# Auto-generated theme variants and releases
+# These are generated from base/ and variants/ directories
+# Do not commit these - they are published to GitHub Releases instead
+themes/
+releases/
+
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
